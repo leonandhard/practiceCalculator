@@ -1,0 +1,45 @@
+body {
+    $main-color_1: rgb(151, 30, 159);
+    $main-color_2: rgb(124, 190, 25);
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to left, $main-color_1, $main-color_2);
+}
+.calculator-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px,auto) repeat(5,100px);
+    & > button {
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 2rem;
+        border: 1px solid white;
+        background-color: rgb(63, 159, 146);
+    }
+    & > button:hover {
+        background-color:  rgba(63, 159, 146,0.7);
+    }
+    .two-col {
+        grid-column: span 2;
+    }
+}
+.results-container {
+    background-color: rgb(47, 99, 144);
+    grid-column: 1/-1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    & .operation-prev {
+        color: aliceblue;
+        font-size: 1.5rem;
+    }
+    & .operation-curr {
+        color: aliceblue;
+        font-size: 2.5rem;
+    }
+}
